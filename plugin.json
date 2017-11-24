@@ -1,0 +1,19 @@
+{
+  "name": "permissions",
+  "version": "1.0",
+  "description": {
+    "en": "Permissions",
+    "ru": "Права доступа",
+    "uk": "Права доступу"
+  },
+  "url": "https://github.com/pytsite/plugin-permissions",
+  "author": {
+    "name": "Alexander Shepetko",
+    "email": "a@shepetko.com",
+    "url": "https://shepetko.com"
+  },
+  "requires": {
+    "packages": [],
+    "plugins": []
+  }
+}
