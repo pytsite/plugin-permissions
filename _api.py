@@ -77,4 +77,4 @@ def define_permission(name: str, description: str, group: str):
         raise _error.PermissionAlreadyDefined("Permission '{}' is already defined.".format(name))
     except _error.PermissionNotDefined:
         _permissions.append((name, description, group))
-        _events.fire('permission.define', name=name)
+        _events.fire('permission@define', name=name)
