@@ -1,13 +1,12 @@
 """PytSite Permissions Plugin API Functions
 """
-from frozendict import frozendict as _frozendict
-from pytsite import events as _events
-from . import _error
-
-__author__ = 'Alexander Shepetko'
+__author__ = 'Oleksandr Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
+from frozendict import frozendict as _frozendict
+from pytsite import events as _events
+from . import _error
 
 _groups = {}
 _permissions = []
