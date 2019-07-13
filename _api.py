@@ -4,8 +4,8 @@ __author__ = 'Oleksandr Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
-from frozendict import frozendict as _frozendict
-from pytsite import events as _events
+from frozendict import frozendict
+from pytsite import events
 from . import _error
 
 _groups = {}
@@ -27,10 +27,10 @@ def define_group(name: str, description: str):
     _groups[name] = description
 
 
-def get_permission_groups() -> _frozendict:
+def get_permission_groups() -> frozendict:
     """Get all defined permission groups.
     """
-    return _frozendict(_groups)
+    return frozendict(_groups)
 
 
 def get_permissions(group: str = None) -> list:
@@ -76,4 +76,4 @@ def define_permission(name: str, description: str, group: str):
         raise _error.PermissionAlreadyDefined("Permission '{}' is already defined.".format(name))
     except _error.PermissionNotDefined:
         _permissions.append((name, description, group))
-        _events.fire('permission@define', name=name)
+        events.fire('permission@define', name=name)
